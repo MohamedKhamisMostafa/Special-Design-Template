@@ -4,6 +4,31 @@
 body{
     font-family: 'Open Sans', sans-serif;
 }
+/* Start Settings Box */
+.settings-box{
+  position: fixed;
+  top: 0;
+  left: -200px;
+  width: 200px;
+  height: 100vh;
+  background-color: white;
+  z-index: 1000;
+  transition: 0.5s;
+}
+.settings-box.open{
+  left: 0;
+}
+.settings-box .fa-gear{
+  position: absolute;
+  right: -30px;
+  top: 100px;
+  padding: 8px 0px;
+  width: 30px;
+  background-color: #fff;
+  text-align: center;
+  cursor: pointer;
+}
+/* End Settings Box */
 /* Start Landing Page */
 .landing-page{
     min-height: 100vh;
