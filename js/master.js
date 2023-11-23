@@ -1,11 +1,36 @@
-// Toggle Spin Class On Icon
-document.querySelector(".toggle-settings .fa-gear").onclick = function () {
-  // Toggle Class Fa-spin for Rotation on Self
-  this.classList.toggle('fa-spin')
-  // Toggle Class Open on Main Settings Box
-  document.querySelector('.settings-box').classList.toggle('open')
-}
+//Check If There's Local Storage Color Option 
 
+
+
+
+// Click On Toggle Settings Gear
+document.querySelector(".toggle-settings .fa-gear").onclick = function () {
+
+  // Toggle Class Fa-spin for Rotation on Self
+  this.classList.toggle('fa-spin');
+
+  // Toggle Class Open on Main Settings Box
+  document.querySelector('.settings-box').classList.toggle('open');
+  
+};
+
+
+// Switch Colors
+const colorsLi =document.querySelectorAll(".colors-list li");
+
+// Loop On All List Items
+colorsLi.forEach(li => {
+
+  // Click On Every List Items
+  li.addEventListener("click", (e) => {
+
+    // Set Color On Root
+    document.documentElement.style.setProperty('--main-color' ,e.target.dataset.color );
+
+  });
+
+
+});
 
 
 // Select Landing Page Element

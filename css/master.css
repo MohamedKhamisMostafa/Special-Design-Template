@@ -30,6 +30,45 @@ body{
   padding: 8px 0px;
   width: 30px;
 }
+.settings-box .option-box {
+  padding: 20px;
+}
+.settings-box .option-box h4{
+  margin: 0;
+  color: #666;
+}
+.settings-box .option-box .colors-list {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+}
+.settings-box .option-box .colors-list li {
+  width: 20px;
+  height: 20px;
+  background-color: #333;
+  display: inline-block;
+  border-radius: 50%;
+  opacity: .5;
+}
+.settings-box .option-box .colors-list li.active{
+  opacity: 1;
+}
+.settings-box .option-box .colors-list li:first-child{
+  background-color: lime;
+}
+.settings-box .option-box .colors-list li:nth-child(2){  
+  background-color: orange;
+}
+.settings-box .option-box .colors-list li:nth-child(3){  
+  background-color: blueviolet;
+}
+.settings-box .option-box .colors-list li:nth-child(4){  
+  background-color: crimson;
+}
+.settings-box .option-box .colors-list li:nth-child(5){ 
+  background-color: gold;
+
+}
 /* End Settings Box */
 /* Start Landing Page */
 .landing-page{
