@@ -4,6 +4,13 @@ if (mainColors !== null) {
 
   document.documentElement.style.setProperty('--main-color', localStorage.getItem("color_option"));
 
+  document.querySelectorAll(".colors-list li").forEach(element => {
+    element.classList.remove('active')
+    if (element.dataset.color === mainColors) {
+      element.classList.add('active')
+    };
+    
+  });
 
 }
 
@@ -52,6 +59,31 @@ colorsLi.forEach(li => {
 
 });
 
+// Switch Random Backgrounds Option
+const randomBackgroundsElement =document.querySelectorAll(".random-backgrounds span");
+
+// Loop On All Spans 
+randomBackgroundsElement.forEach(span => {
+
+  // Click On Every List Items
+  span.addEventListener("click", (e) => {
+
+     // Remove Active Class From All Childrens
+    e.target.parentElement.querySelectorAll(".active").forEach(element => {
+      element.classList.remove('active')
+      
+    });
+
+
+    // Add Active Class On Self
+    e.target.classList.add('active')
+
+
+  });
+
+
+});
+
 
 // Select Landing Page Element
 let landingPage = document.querySelector('.landing-page');
@@ -65,6 +97,6 @@ setInterval(() =>{
   let randomNamber = Math.floor(Math.random() * imgsArray.length);
 
 // Change Background Image Url 
-landingPage.style.backgroundImage = 'url("../images/' + imgsArray[randomNamber] + '")';
+landingPage.style.backgroundImage = 'url("./images/' + imgsArray[randomNamber] + '")';
 
 }, 5000 );

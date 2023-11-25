@@ -1,6 +1,9 @@
 :root{
   --main-color:lime;
 }
+*{
+  box-sizing: border-box;
+}
 body{
     font-family: 'Open Sans', sans-serif;
 }
@@ -31,27 +34,32 @@ body{
   width: 30px;
 }
 .settings-box .option-box {
-  padding: 20px;
+  padding: 10px;
+  text-align: center;
+  background-color: #a3a2a2;
+  margin: 10px;
 }
 .settings-box .option-box h4{
   margin: 0;
-  color: #666;
+  color: #333131;
+  font-size: 14px;
 }
 .settings-box .option-box .colors-list {
   list-style: none;
   text-align: center;
   padding: 0;
+  margin: 8px 0 0
 }
 .settings-box .option-box .colors-list li {
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   background-color: #333;
   display: inline-block;
   border-radius: 50%;
-  opacity: .5;
+  border: 3px solid #a3a2a2;
 }
 .settings-box .option-box .colors-list li.active{
-  opacity: 1;
+  border-color: #fff ;
 }
 .settings-box .option-box .colors-list li:first-child{
   background-color: lime;
@@ -69,6 +77,24 @@ body{
   background-color: gold;
 
 }
+.settings-box .random-backgrounds .yes,
+.settings-box .random-backgrounds .no{
+  background-color: var(--main-color);
+  width: 50px;
+  display: inline-block;
+  color: rgb(255, 255, 255);
+  margin-top: 10px;
+  font-size: 12px;
+  padding: 4px 10px;
+  font-weight: bold;
+  opacity: .5;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.settings-box .random-backgrounds span.active{
+  opacity: 1;
+}
+
 /* End Settings Box */
 /* Start Landing Page */
 .landing-page{
@@ -130,6 +156,7 @@ body{
   z-index: 2;
   color: white;
   text-align: center;
+  width: 80%;
 }
 .introdaction-text h1{
   font-size: 40px;
