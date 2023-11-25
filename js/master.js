@@ -59,6 +59,7 @@ colorsLi.forEach(li => {
 
 });
 
+
 // Switch Random Backgrounds Option
 const randomBackgroundsElement =document.querySelectorAll(".random-backgrounds span");
 
