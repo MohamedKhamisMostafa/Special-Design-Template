@@ -9,7 +9,7 @@ if (mainColors !== null) {
     if (element.dataset.color === mainColors) {
       element.classList.add('active')
     };
-    
+
   });
 
 }
@@ -25,14 +25,14 @@ let backgroundLocalItem = localStorage.getItem('background_option');
 
 // Check If Random Background Local Storage Is Not Empty
 if (backgroundLocalItem !== null) {
-  
-  if (backgroundLocalItem === 'true' ) {
 
-    backgroundOption=true;
+  if (backgroundLocalItem === 'true') {
+
+    backgroundOption = true;
 
   } else {
 
-    backgroundOption=false;
+    backgroundOption = false;
 
   };
 
@@ -43,11 +43,11 @@ if (backgroundLocalItem !== null) {
   });
 
   if (backgroundLocalItem === 'true') {
-    
+
     document.querySelector('.random-backgrounds .yes').classList.add('active')
 
   } else {
-    
+
     document.querySelector('.random-backgrounds .no').classList.add('active')
 
   }
@@ -64,12 +64,12 @@ document.querySelector(".toggle-settings .fa-gear").onclick = function () {
 
   // Toggle Class Open on Main Settings Box
   document.querySelector('.settings-box').classList.toggle('open');
-  
+
 };
 
 
 // Switch Colors
-const colorsLi =document.querySelectorAll(".colors-list li");
+const colorsLi = document.querySelectorAll(".colors-list li");
 
 // Loop On All List Items
 colorsLi.forEach(li => {
@@ -78,14 +78,14 @@ colorsLi.forEach(li => {
   li.addEventListener("click", (e) => {
 
     // Set Color On Root
-    document.documentElement.style.setProperty('--main-color' ,e.target.dataset.color );
+    document.documentElement.style.setProperty('--main-color', e.target.dataset.color);
 
     // Set Color On Local Storage
-    localStorage.setItem("color_option" , e.target.dataset.color );
-     // Remove Active Class From All Childrens
+    localStorage.setItem("color_option", e.target.dataset.color);
+    // Remove Active Class From All Childrens
     e.target.parentElement.querySelectorAll(".active").forEach(element => {
       element.classList.remove('active')
-      
+
     });
 
 
@@ -100,7 +100,7 @@ colorsLi.forEach(li => {
 
 
 // Switch Random Backgrounds Option
-const randomBackgroundsElement =document.querySelectorAll(".random-backgrounds span");
+const randomBackgroundsElement = document.querySelectorAll(".random-backgrounds span");
 
 // Loop On All Spans 
 randomBackgroundsElement.forEach(span => {
@@ -108,10 +108,10 @@ randomBackgroundsElement.forEach(span => {
   // Click On Every List Items
   span.addEventListener("click", (e) => {
 
-     // Remove Active Class From All Childrens
+    // Remove Active Class From All Childrens
     e.target.parentElement.querySelectorAll(".active").forEach(element => {
       element.classList.remove('active')
-      
+
     });
 
 
@@ -120,16 +120,16 @@ randomBackgroundsElement.forEach(span => {
     if (e.target.dataset.background === 'yes') {
       backgroundOption = true;
       randomaizImgs()
-      localStorage.setItem("background_option" , true )
-    }else{
-      backgroundOption=false;
+      localStorage.setItem("background_option", true)
+    } else {
+      backgroundOption = false;
       clearInterval(backgroundInterval)
-      localStorage.setItem("background_option" , false )
+      localStorage.setItem("background_option", false)
     }
 
 
   });
-  
+
 
 
 });
@@ -139,20 +139,20 @@ randomBackgroundsElement.forEach(span => {
 let landingPage = document.querySelector('.landing-page');
 
 // get Array Of Imgs
-let imgsArray = ["img1.jpg","img2.jpg","img3.jpg","img4.jpg","img5.jpg"];
+let imgsArray = ["img1.jpg", "img2.jpg", "img3.jpg", "img4.jpg", "img5.jpg"];
 
 // Function To Randomaiz Imgs
 function randomaizImgs() {
-  if (backgroundOption === true ) {
-    backgroundInterval = setInterval(() =>{
+  if (backgroundOption === true) {
+    backgroundInterval = setInterval(() => {
 
       // Get Random Namber
       let randomNamber = Math.floor(Math.random() * imgsArray.length);
-    
-    // Change Background Image Url 
-    landingPage.style.backgroundImage = 'url("./images/' + imgsArray[randomNamber] + '")';
-    
-    }, 1000 );
+
+      // Change Background Image Url 
+      landingPage.style.backgroundImage = 'url("./images/' + imgsArray[randomNamber] + '")';
+
+    }, 1000);
   }
 }
 randomaizImgs();
