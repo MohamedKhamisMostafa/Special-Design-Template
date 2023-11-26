@@ -1,14 +1,17 @@
-:root{
-  --main-color:lime;
+:root {
+  --main-color: lime;
 }
-*{
+
+* {
   box-sizing: border-box;
 }
-body{
-    font-family: 'Open Sans', sans-serif;
+
+body {
+  font-family: 'Open Sans', sans-serif;
 }
+
 /* Start Settings Box */
-.settings-box{
+.settings-box {
   position: fixed;
   top: 0;
   left: -200px;
@@ -18,10 +21,12 @@ body{
   z-index: 1000;
   transition: 0.5s;
 }
-.settings-box.open{
+
+.settings-box.open {
   left: 0;
 }
-.settings-box .toggle-settings{
+
+.settings-box .toggle-settings {
   position: absolute;
   right: -30px;
   top: 100px;
@@ -29,27 +34,32 @@ body{
   text-align: center;
   cursor: pointer;
 }
-.settings-box .toggle-settings .fa-gear{
+
+.settings-box .toggle-settings .fa-gear {
   padding: 8px 0px;
   width: 30px;
 }
+
 .settings-box .option-box {
   padding: 10px;
   text-align: center;
   background-color: #a3a2a2;
   margin: 10px;
 }
-.settings-box .option-box h4{
+
+.settings-box .option-box h4 {
   margin: 0;
   color: #333131;
   font-size: 14px;
 }
+
 .settings-box .option-box .colors-list {
   list-style: none;
   text-align: center;
   padding: 0;
   margin: 8px 0 0
 }
+
 .settings-box .option-box .colors-list li {
   width: 24px;
   height: 24px;
@@ -58,27 +68,34 @@ body{
   border-radius: 50%;
   border: 3px solid #a3a2a2;
 }
-.settings-box .option-box .colors-list li.active{
-  border-color: #fff ;
+
+.settings-box .option-box .colors-list li.active {
+  border-color: #fff;
 }
-.settings-box .option-box .colors-list li:first-child{
+
+.settings-box .option-box .colors-list li:first-child {
   background-color: lime;
 }
-.settings-box .option-box .colors-list li:nth-child(2){  
+
+.settings-box .option-box .colors-list li:nth-child(2) {
   background-color: orange;
 }
-.settings-box .option-box .colors-list li:nth-child(3){  
+
+.settings-box .option-box .colors-list li:nth-child(3) {
   background-color: blueviolet;
 }
-.settings-box .option-box .colors-list li:nth-child(4){  
+
+.settings-box .option-box .colors-list li:nth-child(4) {
   background-color: crimson;
 }
-.settings-box .option-box .colors-list li:nth-child(5){ 
+
+.settings-box .option-box .colors-list li:nth-child(5) {
   background-color: gold;
 
 }
+
 .settings-box .random-backgrounds .yes,
-.settings-box .random-backgrounds .no{
+.settings-box .random-backgrounds .no {
   background-color: var(--main-color);
   width: 50px;
   display: inline-block;
@@ -91,65 +108,74 @@ body{
   border-radius: 5px;
   cursor: pointer;
 }
-.settings-box .random-backgrounds span.active{
+
+.settings-box .random-backgrounds span.active {
   opacity: 1;
 }
 
 
 /* End Settings Box */
 /* Start Landing Page */
-.landing-page{
-    min-height: 100vh;
-    background-image: url(../images/img5.jpg);
-    background-size: cover;
-    position: relative;
+.landing-page {
+  min-height: 100vh;
+  background-image: url(../images/img5.jpg);
+  background-size: cover;
+  position: relative;
 }
-.landing-page .overlay{
-    background-color: rgba(0, 0, 0, 0.6);
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1;
+
+.landing-page .overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
 
 }
-.header-area{
-    position: relative;
-    z-index: 2;
-    color: white;
-    display: flex;
-    padding: 10px;
+
+.header-area {
+  position: relative;
+  z-index: 2;
+  color: white;
+  display: flex;
+  padding: 10px;
 }
-.header-area .logo{
-    width: 300px;
-    font-weight: 700;
-    padding: 15px;
+
+.header-area .logo {
+  width: 300px;
+  font-weight: 700;
+  padding: 15px;
 }
-.header-area .links{
-    list-style: none;
-    width: 100%;
-    text-align: right;
-    padding-left:0 ;
-    padding-right: 15px;
-    
-    
-}
-.header-area .links li{
-    display: inline-block;
-    margin-left: 10px;
+
+.header-area .links {
+  list-style: none;
+  width: 100%;
+  text-align: right;
+  padding-left: 0;
+  padding-right: 15px;
+
 
 }
-.header-area .links li a{
+
+.header-area .links li {
+  display: inline-block;
+  margin-left: 10px;
+
+}
+
+.header-area .links li a {
   text-decoration: none;
   color: white;
   transition: .5s;
 }
+
 .header-area .links li a:hover,
-.header-area .links li a.active{
+.header-area .links li a.active {
   color: var(--main-color);
 }
-.introdaction-text{
+
+.introdaction-text {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -159,15 +185,18 @@ body{
   text-align: center;
   width: 80%;
 }
-.introdaction-text h1{
+
+.introdaction-text h1 {
   font-size: 40px;
-  margin:0 0 12px;
+  margin: 0 0 12px;
 
 }
-.introdaction-text h1 span{
+
+.introdaction-text h1 span {
   color: var(--main-color);
 }
-.introdaction-text p{
+
+.introdaction-text p {
   line-height: 1.6;
   font-size: 20px;
   margin: 0;
