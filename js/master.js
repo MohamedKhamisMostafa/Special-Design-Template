@@ -14,6 +14,12 @@ if (mainColors !== null) {
 
 }
 
+// Random Background Option
+let backgroundOption = true;
+
+// Varibale To Control The Background interval
+let backgroundInterval;
+
 
 
 
@@ -78,9 +84,20 @@ randomBackgroundsElement.forEach(span => {
 
     // Add Active Class On Self
     e.target.classList.add('active')
+    if (e.target.dataset.background === 'yes') {
+      backgroundOption = true;
+      randomaizImgs()
+      
+    }else{
+      backgroundOption=false;
+      clearInterval(backgroundInterval)
+    }
+        // Set Color On Local Storage
+        localStorage.setItem("background_option" , e.target.dataset.background );
 
 
   });
+  
 
 
 });
@@ -92,12 +109,18 @@ let landingPage = document.querySelector('.landing-page');
 // get Array Of Imgs
 let imgsArray = ["img1.jpg","img2.jpg","img3.jpg","img4.jpg","img5.jpg"];
 
-setInterval(() =>{
+// Function To Randomaiz Imgs
+function randomaizImgs() {
+  if (backgroundOption === true ) {
+    backgroundInterval = setInterval(() =>{
 
-  // Get Random Namber
-  let randomNamber = Math.floor(Math.random() * imgsArray.length);
-
-// Change Background Image Url 
-landingPage.style.backgroundImage = 'url("./images/' + imgsArray[randomNamber] + '")';
-
-}, 5000 );
+      // Get Random Namber
+      let randomNamber = Math.floor(Math.random() * imgsArray.length);
+    
+    // Change Background Image Url 
+    landingPage.style.backgroundImage = 'url("./images/' + imgsArray[randomNamber] + '")';
+    
+    }, 1000 );
+  }
+}
+randomaizImgs();
