@@ -10,6 +10,12 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+.container{
+  width: 1170px;
+  padding: 15px 0 15px 0;
+  margin: auto;
+}
+
 /* Start Settings Box */
 .settings-box {
   position: fixed;
@@ -203,3 +209,37 @@ body {
 }
 
 /* End Landing Page */
+
+/* Start About Us */
+
+.about-us{
+  display: flex;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+}
+.about-us .info-box{
+  flex: 1;
+}
+.about-us .info-box h2{
+  color: var(--main-color);
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0 0 10px;
+  padding: 30px;
+
+}
+.about-us .info-box p{
+  line-height: 1.8;
+  color: #767676;
+  margin: 0;
+}
+.about-us .image-box{
+  flex: 1;
+  text-align: right;
+}
+.about-us .image-box img{
+  width: 250px;
+
+}
+/* End About Us */
