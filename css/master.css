@@ -294,3 +294,32 @@ body {
   transition: all 1s ;
 }
 /* End Our Skills */
+
+/* Start Gallery  */
+
+.gallery{
+  padding: 50px 0 50px 0;
+}
+.gallery h2{
+  color: var(--main-color);
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0 0 50px;
+  padding: 30px;
+  text-align: center;
+
+}
+.gallery .image-box{
+  text-align: center;
+
+}
+.gallery .image-box img{
+  width: 200px;
+  cursor: pointer;
+  background-color: #f6f6f6;
+  border: 1px solid #ccc;
+  padding: 3px;
+  margin: 5px;
+}
+
+/* End Gallery  */
