@@ -157,117 +157,117 @@ function randomaizImgs() {
 }
 randomaizImgs();
 
-  let ourSkills = document.querySelector(".skills");
+let ourSkills = document.querySelector(".skills");
 
-  window.onscroll = function () {
+window.onscroll = function () {
 
-    // Skills Offset Top
-    let skillsOffsetTop = ourSkills.offsetTop;
+  // Skills Offset Top
+  let skillsOffsetTop = ourSkills.offsetTop;
 
-    // Skills Outer Height
-    let skillsOuterHeight = ourSkills.offsetHeight;
-    
-    // Window Height
-    let windowHeight = this.innerHeight;
+  // Skills Outer Height
+  let skillsOuterHeight = ourSkills.offsetHeight;
 
-    // Window ScrollTop
-    let windowScrollTop =this.scrollY;
-    
-    if  (windowScrollTop > (skillsOffsetTop + skillsOuterHeight - windowHeight )-100) {
+  // Window Height
+  let windowHeight = this.innerHeight;
 
-      let allSkills = document.querySelectorAll('.skill-box .skill-progress span')
+  // Window ScrollTop
+  let windowScrollTop = this.scrollY;
 
-      allSkills.forEach(skill => {
-        skill.style.width = skill.dataset.progress;
+  if (windowScrollTop > (skillsOffsetTop + skillsOuterHeight - windowHeight) - 100) {
 
-      })
-      
-    }
+    let allSkills = document.querySelectorAll('.skill-box .skill-progress span')
+
+    allSkills.forEach(skill => {
+      skill.style.width = skill.dataset.progress;
+
+    })
+
   }
+}
 
-  // Create Popup With The Image 
+// Create Popup With The Image 
 
-  let ourGallery = document.querySelectorAll(".gallery img")
+let ourGallery = document.querySelectorAll(".gallery img")
 
-  ourGallery.forEach(img =>{
+ourGallery.forEach(img => {
 
-    img.addEventListener('click', (e)=>{
+  img.addEventListener('click', (e) => {
 
-      // Create Overlay Element
-      let overlay = document.createElement("div");
+    // Create Overlay Element
+    let overlay = document.createElement("div");
 
-      // Add Class To Overlay
-      overlay.className = 'popup-overlay';
+    // Add Class To Overlay
+    overlay.className = 'popup-overlay';
 
-      // Append Overlay To The Body
-      document.body.appendChild(overlay);
+    // Append Overlay To The Body
+    document.body.appendChild(overlay);
 
-      // Create Popup
-      let popupBox = document.createElement("div");
+    // Create Popup
+    let popupBox = document.createElement("div");
 
-      // Add Class To Popup Box
-      popupBox.className = 'popup-box';
+    // Add Class To Popup Box
+    popupBox.className = 'popup-box';
 
-      // Add 
-      if (img.alt !== null) {
+    // Add 
+    if (img.alt !== null) {
 
-        // Creat Heading
-        let imgHeading = document.createElement("h3");
+      // Creat Heading
+      let imgHeading = document.createElement("h3");
 
-        // Create Text For Heading
-        let imgText = document.createTextNode(img.alt);
+      // Create Text For Heading
+      let imgText = document.createTextNode(img.alt);
 
-        // Append The Text To The Heading
-        imgHeading.appendChild(imgText);
+      // Append The Text To The Heading
+      imgHeading.appendChild(imgText);
 
-        // Append The Heading To The Popup Box
-        popupBox.appendChild(imgHeading);
+      // Append The Heading To The Popup Box
+      popupBox.appendChild(imgHeading);
 
-      }
-      
-      // Create The Image
-      let popupImage = document.createElement('img')
+    }
 
-      // Set Image Source
-      popupImage.src = img.src;
+    // Create The Image
+    let popupImage = document.createElement('img')
 
-      // Add Image To Popup Box
-        popupBox.appendChild(popupImage);
+    // Set Image Source
+    popupImage.src = img.src;
 
-        // Append Popup Box TO The Body
-        document.body.appendChild(popupBox);
+    // Add Image To Popup Box
+    popupBox.appendChild(popupImage);
 
-        // Create The Colse Span 
-        let closeButton = document.createElement("span");
+    // Append Popup Box TO The Body
+    document.body.appendChild(popupBox);
 
-        // Creat The Close Button Text
-        let closeButtonText = document.createTextNode("X");
+    // Create The Colse Span 
+    let closeButton = document.createElement("span");
 
-        // Append Text To Close Button
-        closeButton.appendChild(closeButtonText);
+    // Creat The Close Button Text
+    let closeButtonText = document.createTextNode("X");
 
-        // Add Class To Close Button
-        closeButton.className = 'close-button';
+    // Append Text To Close Button
+    closeButton.appendChild(closeButtonText);
 
-        // Append Close Button To The Popup Box
-        popupBox.appendChild(closeButton);
+    // Add Class To Close Button
+    closeButton.className = 'close-button';
 
-    });
+    // Append Close Button To The Popup Box
+    popupBox.appendChild(closeButton);
 
   });
 
-  // Close Popup
-  document.addEventListener('click', function (e) {
+});
 
-    if (e.target.className == 'close-button') {
+// Close Popup
+document.addEventListener('click', function (e) {
 
-      // Remove The Current PopUp
-      e.target.parentNode.remove();
+  if (e.target.className == 'close-button') {
 
-      // Remove Overlay
-      document.querySelector('.popup-overlay').remove();
-    }
+    // Remove The Current PopUp
+    e.target.parentNode.remove();
+
+    // Remove Overlay
+    document.querySelector('.popup-overlay').remove();
+  }
 
 
 
-  })
+})

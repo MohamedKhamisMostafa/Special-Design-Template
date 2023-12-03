@@ -10,7 +10,7 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
-.container{
+.container {
   width: 1170px;
   padding: 15px 0 15px 0;
   margin: auto;
@@ -212,16 +212,18 @@ body {
 
 /* Start About Us */
 
-.about-us{
+.about-us {
   display: flex;
   padding-top: 50px;
   padding-bottom: 50px;
 
 }
-.about-us .info-box{
+
+.about-us .info-box {
   flex: 1;
 }
-.about-us .info-box h2{
+
+.about-us .info-box h2 {
   color: var(--main-color);
   font-size: 30px;
   font-weight: bold;
@@ -229,31 +231,35 @@ body {
   padding: 30px;
 
 }
-.about-us .info-box p{
+
+.about-us .info-box p {
   line-height: 1.8;
   color: #767676;
   margin: 0;
 }
-.about-us .image-box{
+
+.about-us .image-box {
   flex: 1;
   text-align: right;
 }
-.about-us .image-box img{
+
+.about-us .image-box img {
   width: 250px;
 
 }
+
 /* End About Us */
 
 /* Start Our Skills */
 
-.skills{
+.skills {
   background-color: #eee;
   padding-top: 50px;
   padding-bottom: 50px;
 
 }
 
-.skills h2{
+.skills h2 {
   color: var(--main-color);
   font-size: 30px;
   font-weight: bold;
@@ -262,45 +268,47 @@ body {
   text-align: center;
 }
 
-.skills .skill-box{
+.skills .skill-box {
   background-color: #fff;
   display: flex;
   margin-bottom: 15px;
   padding: 15px;
 }
 
-.skills .skill-box .skill-name{
+.skills .skill-box .skill-name {
   line-height: 30px;
   width: 140px;
   text-align: center;
   font-weight: bold;
 }
 
-.skills .skill-box .skill-progress{
+.skills .skill-box .skill-progress {
   height: 30px;
   width: 100%;
-  background-color:#f6f6f6;
+  background-color: #f6f6f6;
   border-radius: 6px;
   position: relative;
 }
 
-.skills .skill-box .skill-progress span{
+.skills .skill-box .skill-progress span {
   position: absolute;
   left: 0;
   top: 0;
   width: 0;
   height: 100%;
   background-color: var(--main-color);
-  transition: all 1s ;
+  transition: all 1s;
 }
+
 /* End Our Skills */
 
 /* Start Gallery  */
 
-.gallery{
+.gallery {
   padding: 50px 0 50px 0;
 }
-.gallery h2{
+
+.gallery h2 {
   color: var(--main-color);
   font-size: 30px;
   font-weight: bold;
@@ -309,11 +317,13 @@ body {
   text-align: center;
 
 }
-.gallery .image-box{
+
+.gallery .image-box {
   text-align: center;
 
 }
-.gallery .image-box img{
+
+.gallery .image-box img {
   width: 200px;
   cursor: pointer;
   background-color: #f6f6f6;
@@ -322,7 +332,7 @@ body {
   margin: 5px;
 }
 
-.popup-overlay{
+.popup-overlay {
   background-color: rgba(0, 0, 0, 0.7);
   position: fixed;
   width: 100%;
@@ -332,7 +342,7 @@ body {
   top: 0;
 }
 
-.popup-box{
+.popup-box {
   position: fixed;
   left: 50%;
   top: 50%;
@@ -343,14 +353,14 @@ body {
   z-index: 1001;
 }
 
-.popup-box h3{
+.popup-box h3 {
   font-weight: bolder;
   color: var(--main-color);
   text-align: center;
   margin: 0 0 20px;
 }
 
-.close-button{
+.close-button {
   position: absolute;
   top: -15px;
   right: -15px;
@@ -367,7 +377,7 @@ body {
   font-family: cursive, Tahoma, Arial;
 }
 
-.popup-box img{
+.popup-box img {
   max-width: 100%;
 }
 
