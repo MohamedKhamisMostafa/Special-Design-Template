@@ -502,3 +502,53 @@ body {
   top: 20px;
 }
 /* End Timeline */
+
+/* Start Our Features */
+
+.features{
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.features h2{
+  color: var(--main-color);
+  text-align: center;
+  font-weight: bold;
+  margin: 0 0 60px;
+  font-size: 30px;
+}
+
+.features .feat-box{
+  width: calc(100% / 3);
+  float: left;
+  text-align: center;
+  margin-bottom:40px ;
+}
+
+.features .feat-box img {
+  width: 96px;
+}
+.features .feat-box h4 {
+  font-size: 22px;
+  margin: 15px 0 40px;
+  position: relative;
+}
+
+.features .feat-box h4::before{
+  content: '';
+  width: 60px;
+  position: absolute;
+  height: 4px;
+  left: 50%;
+  bottom: -22px;
+  margin-left: -30px;
+  background-color: var(--main-color);
+}
+
+.features .feat-box p {
+  width: 80%;
+  margin: 0 auto;
+  line-height: 1.7;
+  color: #706f6f;
+}
+/* End Our Features */
