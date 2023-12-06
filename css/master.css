@@ -433,10 +433,29 @@ body {
   float: left;
 }
 
+.timeline .timeline-content .left::before{
+  right: -35px;
+}
+
 .timeline .timeline-content .right{
   float: right;
 }
 
+.timeline .timeline-content .right::before{
+  left: -35px;
+}
+
+.timeline .timeline-content .left::before,
+.timeline .timeline-content .right::before{
+  content: '';
+  width: 14px;
+  height: 14px;
+  background-color: #fff;
+  border: 3px var(--main-color) solid;
+  border-radius: 50%;
+  position: absolute;
+  top: 20px;
+}
 
 .timeline .timeline-content .content{
   padding: 20px;
@@ -455,6 +474,31 @@ body {
   margin: 0;
 }
 
+.clearfix{
+  clear: both;
+}
 
+.timeline .timeline-content .left .content::before{
+  content: '';
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent transparent #fff;
+  height: 0;
+  width: 0;
+  position: absolute;
+  right: -19px;
+  top: 20px;
+}
 
+.timeline .timeline-content .right .content::before{
+  content: '';
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent #fff transparent transparent;
+  height: 0;
+  width: 0;
+  position: absolute;
+  left: -19px;
+  top: 20px;
+}
 /* End Timeline */
