@@ -101,8 +101,8 @@ body {
 
 }
 
-.settings-box .random-backgrounds .yes,
-.settings-box .random-backgrounds .no {
+.settings-box .option-box .yes,
+.settings-box .option-box .no {
   background-color: var(--main-color);
   width: 50px;
   display: inline-block;
@@ -116,7 +116,7 @@ body {
   cursor: pointer;
 }
 
-.settings-box .random-backgrounds span.active {
+.settings-box .option-box span.active {
   opacity: 1;
 }
 

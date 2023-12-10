@@ -82,15 +82,8 @@ colorsLi.forEach(li => {
 
     // Set Color On Local Storage
     localStorage.setItem("color_option", e.target.dataset.color);
-    // Remove Active Class From All Childrens
-    e.target.parentElement.querySelectorAll(".active").forEach(element => {
-      element.classList.remove('active')
 
-    });
-
-
-    // Add Active Class On Self
-    e.target.classList.add('active')
+      handleActive(e);
 
 
   });
@@ -108,22 +101,23 @@ randomBackgroundsElement.forEach(span => {
   // Click On Every List Items
   span.addEventListener("click", (e) => {
 
-    // Remove Active Class From All Childrens
-    e.target.parentElement.querySelectorAll(".active").forEach(element => {
-      element.classList.remove('active')
-
-    });
+    handleActive(e);
 
 
-    // Add Active Class On Self
-    e.target.classList.add('active')
     if (e.target.dataset.background === 'yes') {
+
       backgroundOption = true;
-      randomaizImgs()
+
+      randomaizImgs();
+
       localStorage.setItem("background_option", true)
+
     } else {
+
       backgroundOption = false;
+
       clearInterval(backgroundInterval)
+      
       localStorage.setItem("background_option", false)
     }
 
@@ -301,3 +295,18 @@ function goSection(elements) {
 }
 goSection(allBullets);
 goSection(allLinks);
+
+function handleActive(ev){
+
+  // Remove Active Class From All Childrens
+  ev.target.parentElement.querySelectorAll(".active").forEach(element => {
+
+
+    element.classList.remove('active')
+  
+  });
+  
+  
+  // Add Active Class On Self
+  ev.target.classList.add('active')
+};
