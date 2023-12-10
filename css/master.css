@@ -26,6 +26,7 @@ body {
   background-color: white;
   z-index: 1000;
   transition: 0.5s;
+  border: 1px solid #dad7d7;
 }
 
 .settings-box.open {
@@ -128,7 +129,7 @@ body {
   position: fixed;
   right: 0;
   top: 50%;
-  transform: translate(-50%);
+  transform: translateY(-50%);
   width: 40px;
   z-index: 1000;
 }
