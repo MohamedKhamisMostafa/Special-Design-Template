@@ -138,7 +138,7 @@ body {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  margin: 10px auto ;
+  margin: 20px auto ;
   cursor: pointer;
   position: relative;
 }
@@ -147,10 +147,29 @@ body {
   background-color: var(--main-color);
   width: 120px;
   position: absolute;
-  right: 40px;
+  right: 32px;
   color: #fff;
-  padding: 4px 10px;
+  padding: 8px 10px;
   top: -6px;
+  cursor: default;
+  pointer-events: none;
+  display: none;
+}
+
+.nav-bullets .bullet:hover .tooltip{
+  display: block;
+}
+.nav-bullets .bullet .tooltip::before{
+  content: '';
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent transparent var(--main-color);
+  height: 0;
+  width: 0;
+  position: absolute;
+  right: -19px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 /* End Nav Bullets */
 /* Start Landing Page */
