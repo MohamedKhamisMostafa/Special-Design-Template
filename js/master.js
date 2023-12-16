@@ -364,3 +364,19 @@ bulletsSpan.forEach(span => {
   })
 
 });
+
+// Reset Options
+
+document.querySelector(".reset-options").onclick = function () {
+
+  // localStorage.clear();
+
+  localStorage.removeItem('color_option');
+  localStorage.removeItem('background_option');
+  localStorage.removeItem('bullets_option');
+  
+
+
+  //Reload Window
+  window.location.reload();
+}

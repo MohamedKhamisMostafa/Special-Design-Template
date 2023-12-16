@@ -120,6 +120,18 @@ body {
   opacity: 1;
 }
 
+.reset-options{
+  background-color: #f44336;
+  border: none;
+  color: white;
+  padding: 10px;
+  width: 178px;
+  margin: 10px auto;
+  display: block;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
 
 /* End Settings Box */
 
