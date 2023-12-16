@@ -14,6 +14,14 @@ if (mainColors !== null) {
 
 }
 
+//Check If There's Local Storage About-Us Image Color Option 
+let aboutUsImage = localStorage.getItem("about-us_option")
+
+if (aboutUsImage !== null) {
+
+  document.querySelector('.about-us .image-box').innerHTML =`<img src="images/about-us-${localStorage.getItem("about-us_option")}.png" alt="">`;
+
+}
 // Random Background Option
 let backgroundOption = true;
 
@@ -80,7 +88,11 @@ colorsLi.forEach(li => {
     // Set Color On Root
     document.documentElement.style.setProperty('--main-color', e.target.dataset.color);
 
+    // Set About-Us Image Color
+    document.querySelector('.about-us .image-box').innerHTML =`<img src="images/about-us-${e.target.dataset.color}.png" alt="">`;
+
     // Set Color On Local Storage
+    localStorage.setItem("about-us_option" , e.target.dataset.color)
     localStorage.setItem("color_option", e.target.dataset.color);
 
       handleActive(e);
@@ -374,6 +386,7 @@ document.querySelector(".reset-options").onclick = function () {
   localStorage.removeItem('color_option');
   localStorage.removeItem('background_option');
   localStorage.removeItem('bullets_option');
+  localStorage.removeItem('about-us_option');
   
 
 
