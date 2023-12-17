@@ -692,3 +692,104 @@ body {
 }
 
 /* End Testimonials */
+
+/* Contact Us */
+
+.contact{
+  min-height: 600px;
+  position: relative;
+  background-image: url(../images/contact.png);
+  background-size: cover;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.contact .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background-color: rgb(255, 255, 255 , 0.6); */
+  background-color: rgb(255 255 255 / 60% );
+}
+
+.contact .container{
+  position: relative;
+  z-index: 2;
+}
+
+.contact h2 {
+  font-weight: bold;
+  font-size: 30px;
+  color: var(--main-color);
+  margin: 0 0 60px;
+  text-align: center; 
+}
+
+.contact form {
+
+    max-width: 800px;
+    margin: auto;
+  }
+
+.contact form .left {
+float: left;
+width: 49%;
+}
+
+.contact form .right {
+float: right;
+width: 49%;
+}
+
+.contact form input:not([type="submit"]),
+.contact form textarea {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #CCC;
+  background-color: rgba(218, 218, 218, 0.19);
+}
+
+.contact form input:not([type="submit"]):focus,
+.contact form textarea:focus { 
+  outline: 1px solid var(--main-color);
+}
+
+.contact form input {
+  height: 40px;
+}
+
+.contact form textarea {
+  height: 150px;
+}
+
+.contact form input[type = "submit"]{
+  padding: 10px;
+  width: 100%;
+  border-color: transparent;
+  background-color: var(--main-color);
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px
+}
+
+.contact form textarea:focus::-webkit-input-placeholder,
+.contact form input:not([type="submit"]):focus::-webkit-input-placeholder {
+  opacity: 0;
+  transition: .3s;
+}
+
+.contact form textarea:focus:-ms-input-placeholder,
+.contact form input:not([type="submit"]):focus:-ms-input-placeholder {
+  opacity: 0;
+  transition: .3s;
+}
+
+.contact form textarea:focus::placeholder,
+.contact form input:not([type="submit"]):focus::placeholder {
+  opacity: 0;
+  transition: .3s;
+}
