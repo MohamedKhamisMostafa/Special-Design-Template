@@ -11,7 +11,7 @@ body {
 }
 
 .container {
-  width: 1170px;
+  width: 100%;
   padding: 15px 0 15px 0;
   margin: auto;
 }
@@ -793,3 +793,26 @@ width: 49%;
   opacity: 0;
   transition: .3s;
 }
+/* ENd Contact Us */
+/* Start Grid System */
+@media (min-width: 576px){ /* Small Devices => Landscape Phones */
+  .container{
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px){ /* Medium => Tablets */
+  .container{
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px){ /* Desktop */
+  .container{
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px){ /* Large Screens */
+  .container{
+    max-width: 1140px;
+  }
+}
+/* End Grid System */
