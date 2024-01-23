@@ -218,12 +218,14 @@ body {
   padding: 15px;
 }
 
+.header-area .links-container{
+width: 100%;
+text-align: right;
+}
 .header-area .links {
   list-style: none;
   width: 100%;
-  text-align: right;
   padding-left: 0;
-  padding-right: 15px;
 
 
 }
@@ -243,6 +245,26 @@ body {
 .header-area .links li a:hover,
 .header-area .links li a.active {
   color: var(--main-color);
+}
+
+.header-area .toggle-menu{
+  background: none;
+  border: none;
+  width: 40px;
+  cursor: pointer;
+  margin-top: 15px;
+  display: none;
+}
+
+.header-area .toggle-menu:focus{
+  outline: none;
+}
+
+.header-area .toggle-menu span{
+  display: block;
+  background-color: #fff;
+  height: 4px;
+  margin-bottom: 4px;
 }
 
 .introdaction-text {
@@ -270,6 +292,15 @@ body {
   line-height: 1.6;
   font-size: 20px;
   margin: 0;
+}
+
+@media (max-width: 921px) {
+  .header-area .links{
+    display: none;
+  }
+  .header-area .toggle-menu{
+    display: inline-block;
+  }
 }
 
 /* End Landing Page */
