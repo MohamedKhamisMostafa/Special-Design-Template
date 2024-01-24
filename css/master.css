@@ -254,6 +254,17 @@ text-align: right;
   cursor: pointer;
   margin-top: 15px;
   display: none;
+  position: relative;
+}
+
+.header-area .toggle-menu::before{
+  content: '';
+  border-width: 10px ;
+  border-style: solid;
+  border-color: transparent transparent #fff transparent;
+  position: absolute;
+  top: 22px;
+  left: 10px;
 }
 
 .header-area .toggle-menu:focus{
@@ -266,6 +277,7 @@ text-align: right;
   height: 4px;
   margin-bottom: 4px;
 }
+
 
 .introdaction-text {
   position: absolute;
@@ -297,6 +309,25 @@ text-align: right;
 @media (max-width: 921px) {
   .header-area .links{
     display: none;
+  }
+  .header-area .links.open{
+    background-color: white;
+    display: block;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    border-radius: 4px;
+    padding: 10px;
+    text-align: left;
+  }
+  .header-area .links.open li:not(:last-of-type) {
+    display: block;
+    margin-bottom: 10px;
+  }
+  .header-area .links.open li a{
+    color: var(--main-color);
+    font-weight: bold;
   }
   .header-area .toggle-menu{
     display: inline-block;
