@@ -203,6 +203,11 @@ body {
   z-index: 1;
 
 }
+.landing-page .container {
+  position: relative;
+  z-index:1000;
+
+}
 
 .header-area {
   position: relative;
@@ -296,6 +301,12 @@ text-align: right;
 
 }
 
+@media (max-width: 575px){
+  .introdaction-text h1 {
+    font-size: 26px;
+  }
+}
+
 .introdaction-text h1 span {
   color: var(--main-color);
 }
@@ -345,9 +356,20 @@ text-align: right;
 
 }
 
+@media (max-width: 767px) {
+  .about-us {
+    display:block;
+    padding-right: 20px;
+    padding-left: 20px;
+    text-align: center;
+  }
+  
+}
+
 .about-us .info-box {
   flex: 1;
 }
+
 
 .about-us .info-box h2 {
   color: var(--main-color);
@@ -355,9 +377,15 @@ text-align: right;
   font-weight: bold;
   margin: 0 0 10px;
   padding: 30px;
-
+  
 }
 
+@media (max-width: 767px) {
+  .about-us .info-box h2 {
+    padding: 0;
+  }
+  
+}
 .about-us .info-box p {
   line-height: 1.8;
   color: #767676;
@@ -366,7 +394,7 @@ text-align: right;
 
 .about-us .image-box {
   flex: 1;
-  text-align: right;
+  text-align: center;
 }
 
 .about-us .image-box img {
@@ -401,11 +429,25 @@ text-align: right;
   padding: 15px;
 }
 
+@media (max-width: 767px) {
+  .skills .skill-box {
+    display:block;
+  }
+  
+}
+
 .skills .skill-box .skill-name {
   line-height: 30px;
   width: 140px;
   text-align: center;
   font-weight: bold;
+}
+
+@media (max-width: 767px) {
+  .skills .skill-box .skill-name {
+    width: 100%;
+    margin-bottom: 10px;
+  }
 }
 
 .skills .skill-box .skill-progress {
@@ -432,6 +474,7 @@ text-align: right;
 
 .gallery {
   padding: 50px 0 50px 0;
+  text-align: center;
 }
 
 .gallery h2 {
