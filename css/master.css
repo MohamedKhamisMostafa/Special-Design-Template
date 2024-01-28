@@ -257,7 +257,7 @@ text-align: right;
   position: relative;
 }
 
-.header-area .toggle-menu::before{
+.header-area .toggle-menu.menu-active::before{
   content: '';
   border-width: 10px ;
   border-style: solid;
