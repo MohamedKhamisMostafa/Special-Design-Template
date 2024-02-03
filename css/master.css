@@ -973,6 +973,23 @@ width: 49%;
   transition: .3s;
 }
 /* ENd Contact Us */
+/* Start Footer */
+.footer{
+  padding:20px;
+  text-align: center;
+  background-color: #333;
+  color: var(--main-color);
+  font-weight: bolder;
+}
+.footer a{
+  color: #eee;
+  transition: .5s;
+}
+
+.footer a:hover{
+  color: var(--main-color);
+}
+/* End Footer */
 /* Start Grid System */
 @media (min-width: 576px){ /* Small Devices => Landscape Phones */
   .container{
